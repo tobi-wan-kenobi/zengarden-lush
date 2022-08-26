@@ -91,9 +91,10 @@ local theme = lush(function()
     -- Structure      { }, --   struct, union, enum, etc.
     -- Typedef        { }, --   A typedef
 
-    CursorLine   { bg = bg.lighten(5) }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
+    CursorLine   { bg = bg.lighten(3) }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
     CursorLineNr { gui = 'bold' }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     SignColumn   { }, -- Column where |signs| are displayed
+    ColorColumn  { bg = bg.lighten(3) }, -- Columns set with 'colorcolumn'
 
     Special        { fg = orange }, -- (*) Any special symbol
     -- SpecialChar    { }, --   Special character in a constant
@@ -106,7 +107,6 @@ local theme = lush(function()
     DiffChange   { fg = dark_blue }, -- Diff mode: Changed line |diff.txt|
     DiffDelete   { fg = dark_red }, -- Diff mode: Deleted line |diff.txt|
 
-    -- ColorColumn  { }, -- Columns set with 'colorcolumn'
     -- Conceal      { }, -- Placeholder characters substituted for concealed text (see 'conceallevel')
     -- Cursor       { }, -- Character under the cursor
     -- lCursor      { }, -- Character under the cursor when |language-mapping| is used (see 'guicursor')
