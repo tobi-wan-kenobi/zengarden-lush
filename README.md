@@ -17,6 +17,18 @@ version also works (with lighter shades of accents).
 
 ![ZenGarden Lush](images/zengarden_lush.png)
 
+# Installation
+
+## Packer
+
+```
+  use { 'tobi-wan-kenobi/zengarden-lush',
+    requires = 'rktjmp/lush.nvim',
+    config = function()
+      vim.cmd [[ colorscheme zengarden-lush ]]
+    end
+  }
+```
 
 # Palette
 
