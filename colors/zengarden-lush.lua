@@ -1,5 +1,7 @@
 -- You probably always want to set this in your vim file
 vim.opt.background = 'dark'
+vim.opt.termguicolors = true
+
 vim.g.colors_name = 'zengarden-lush'
 
 -- By setting our module to nil, we clear lua's cache,
