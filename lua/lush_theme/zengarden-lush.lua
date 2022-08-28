@@ -172,7 +172,7 @@ local theme = lush(function()
     -- LspReferenceWrite           { } , -- Used for highlighting "write" references
     LspCodeLens                 { fg = orange } , -- Used to color the virtual text of the codelens. See |nvim_buf_set_extmark()|.
     -- LspCodeLensSeparator        { } , -- Used to color the seperator between two or more code lens.
-    LspSignatureActiveParameter { Comment } , -- Used to highlight the active parameter in the signature help. See |vim.lsp.handlers.signature_help()|.
+    LspSignatureActiveParameter { fg = yellow, gui = 'bold' } , -- Used to highlight the active parameter in the signature help. See |vim.lsp.handlers.signature_help()|.
     LspDiagnosticsDefaultError { fg = dark_red },
     LspDiagnosticsDefaultWarning { fg = orange } , -- Used for "Warn" signs in sign column.
     LspDiagnosticsDefaultInformation { fg = blue } , -- Used for "Info" signs in sign column.
