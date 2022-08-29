@@ -56,8 +56,8 @@ local theme = lush(function()
     FloatBorder { },
     Pmenu        { bg = dark_grey }, -- Popup menu: Normal item.
     PmenuSel     { bg = dark_cyan }, -- Popup menu: Selected item.
-    PmenuSbar    { bg = red}, -- Popup menu: Scrollbar.
-    PmenuThumb   { }, -- Popup menu: Thmb of the scrollbar.
+    PmenuSbar    { bg = dark_cyan}, -- Popup menu: Scrollbar.
+    PmenuThumb   { bg = cyan }, -- Popup menu: Thmb of the scrollbar.
     IncSearch    { bg = yellow, fg = bg }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     Search       { bg = dark_yellow, fg = bg }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
     ErrorMsg     { bg = dark_red, fg = fg }, -- Error messages on the command line
@@ -68,6 +68,8 @@ local theme = lush(function()
     Number         { fg = yellow }, --   A number constant: 234, 0xff
     Boolean        { fg = blue }, --   A boolean constant: TRUE, false
     Float          { fg = yellow }, --   A floating point constant: 2.3e10
+
+    MiniTrailspace { bg = red, fg = fg },
 
     Identifier     { fg = cyan }, -- (*) Any variable name
     Function       { fg = cyan }, --   Function name (also: methods for classes)
