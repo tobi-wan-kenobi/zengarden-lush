@@ -52,9 +52,9 @@ local theme = lush(function()
     LineNr       { fg = grey }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     Visual       { gui = 'reverse' }, -- Visual mode selection
     NonText      { fg = grey }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    NormalFloat  { }, -- Normal text in floating windows.
+    NormalFloat  { fg = grey, bg = bg.darken(15) }, -- Normal text in floating windows.
     FloatBorder { },
-    Pmenu        { bg = dark_grey }, -- Popup menu: Normal item.
+    Pmenu        { fg = grey, bg = bg.darken(15) }, -- Popup menu: Normal item.
     PmenuSel     { bg = dark_cyan }, -- Popup menu: Selected item.
     PmenuSbar    { bg = dark_cyan}, -- Popup menu: Scrollbar.
     PmenuThumb   { bg = cyan }, -- Popup menu: Thmb of the scrollbar.
