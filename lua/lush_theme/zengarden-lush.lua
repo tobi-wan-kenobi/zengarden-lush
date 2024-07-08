@@ -24,12 +24,10 @@
 local lush = require("lush")
 local hsl = lush.hsl
 
+local white = hsl("#faebd7")
+local black = hsl("#faebd7")
 local fg = hsl("#faebd7")
 local bg = hsl("#353839")
-if (vim.o.background == "light") then 
-	fg = hsl("#353839")
-	bg = hsl("#faebd7")
-end
 local grey = hsl("#686b6c")
 local dark_grey = hsl("#505354")
 local green = hsl("#53a776")
@@ -48,6 +46,11 @@ local medium_blue = hsl("#477ab7")
 local dark_blue = hsl("#26619c")
 local red = hsl("#f85e89")
 local dark_red = hsl("#ba1d58")
+
+if (vim.o.background == "light") then
+	fg = hsl("#353839")
+	bg = hsl("#faebd7")
+end
 
 ---@diagnostic disable: undefined-global
 local theme = lush(function(injected_functions)
@@ -93,8 +96,8 @@ local theme = lush(function(injected_functions)
     FloatBorder    { fg = fg }, -- Border of floating windows.
     FloatTitle     { fg = cyan, gui = "bold" }, -- Title of floating windows.
     -- NormalNC       { }, -- normal text in non-current windows
-    Pmenu          { fg = fg, bg = dark_grey }, -- Popup menu: Normal item.
-    PmenuSel       { bg = dark_cyan }, -- Popup menu: Selected item.
+    Pmenu          { fg = white, bg = dark_grey }, -- Popup menu: Normal item.
+    PmenuSel       { fg = white, bg = dark_cyan }, -- Popup menu: Selected item.
     -- PmenuKind      { }, -- Popup menu: Normal item "kind"
     -- PmenuKindSel   { }, -- Popup menu: Selected item "kind"
     -- PmenuExtra     { }, -- Popup menu: Normal item "extra text"
