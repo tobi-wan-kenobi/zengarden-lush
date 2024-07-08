@@ -26,6 +26,10 @@ local hsl = lush.hsl
 
 local fg = hsl("#faebd7")
 local bg = hsl("#353839")
+if (vim.o.background == "light") then 
+	fg = hsl("#353839")
+	bg = hsl("#faebd7")
+end
 local grey = hsl("#686b6c")
 local dark_grey = hsl("#505354")
 local green = hsl("#53a776")
