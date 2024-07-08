@@ -25,7 +25,7 @@ local lush = require("lush")
 local hsl = lush.hsl
 
 local white = hsl("#faebd7")
-local black = hsl("#faebd7")
+local black = hsl("#353839")
 local fg = hsl("#faebd7")
 local bg = hsl("#353839")
 local grey = hsl("#686b6c")
@@ -50,6 +50,9 @@ local dark_red = hsl("#ba1d58")
 if (vim.o.background == "light") then
 	fg = hsl("#353839")
 	bg = hsl("#faebd7")
+else
+	fg = hsl("#faebd7")
+	bg = hsl("#353839")
 end
 
 ---@diagnostic disable: undefined-global
