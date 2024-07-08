@@ -95,8 +95,8 @@ local theme = lush(function(injected_functions)
     -- MoreMsg        { }, -- |more-prompt|
     NonText        { fg = grey }, -- "@" at the end of the window, characters from "showbreak" and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn"t fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal         { fg = fg, bg = bg }, -- Normal text
-    NormalFloat    { fg = fg, bg = dark_grey }, -- Normal text in floating windows.
-    FloatBorder    { fg = fg }, -- Border of floating windows.
+    NormalFloat    { fg = fg.lighten(15), bg = bg.darken(15) }, -- Normal text in floating windows.
+    FloatBorder    { fg = fg.lighten(15), bg = bg.darken(15) }, -- Border of floating windows.
     FloatTitle     { fg = cyan, gui = "bold" }, -- Title of floating windows.
     -- NormalNC       { }, -- normal text in non-current windows
     Pmenu          { fg = white, bg = dark_grey }, -- Popup menu: Normal item.
