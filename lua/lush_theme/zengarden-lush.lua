@@ -24,6 +24,21 @@
 local lush = require("lush")
 local hsl = lush.hsl
 
+local dark = {
+  bg = hsl("#353839"),
+  fg = hsl("#faebd7"),
+}
+
+local light = {
+  bg = hsl("#faebd7"),
+  fg = hsl("#353839"),
+}
+
+local colors = dark
+if vim.o.background == "light" then
+  colors = light
+end
+
 local white = hsl("#faebd7")
 local black = hsl("#353839")
 local fg = hsl("#faebd7")
