@@ -98,7 +98,7 @@ local themes = {
     green = colors.base.green,
     orange = colors.base.orange,
     magenta = colors.base.magenta,
-    cyan = colors.base.cyan,
+    cyan = colors.shade1.cyan,
     yellow = colors.base.yellow,
     error = colors.base.red,
     warn = colors.base.orange,
@@ -181,9 +181,9 @@ local theme = lush(function(injected_functions)
     -- SpellCap       { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     -- SpellLocal     { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     -- SpellRare      { }, -- Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
-    StatusLine     { fg = theme.fg, bg = variant.bg }, -- Status line of current window
-    StatusLineNC   { fg = theme.fg, bg = theme.comments }, -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-    TabLine        { fg = variant.fg, bg = variant.bg }, -- Tab pages line, not active tab page label
+    StatusLine     { fg = variant.fg, bg = theme.bg }, -- Status line of current window
+    StatusLineNC   { fg = theme.comments, bg = theme.bg }, -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+    TabLine        { fg = variant.fg, bg = theme.bg, gui = "bold" }, -- Tab pages line, not active tab page label
     -- TabLineFill    { }, -- Tab pages line, where there are no labels
     -- TabLineSel     { }, -- Tab pages line, active tab page label
     Title          { fg = variant.fg, gui = "bold" }, -- Titles for output from ":set all", ":autocmd" etc.
@@ -193,8 +193,8 @@ local theme = lush(function(injected_functions)
     -- Whitespace     { }, -- "nbsp", "space", "tab" and "trail" in "listchars"
     Winseparator   { fg = colors.base.grey }, -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
     -- WildMenu       { }, -- Current match in "wildmenu" completion
-    WinBar         { fg = theme.fg, bg = variant.bg }, -- Window bar of current window
-    WinBarNC       { fg = theme.fg, bg = colors.dark.grey }, -- Window bar of not-current windows
+    WinBar         { fg = variant.fg, bg = theme.bg }, -- Window bar of current window
+    WinBarNC       { fg = theme.comments, bg = theme.bg }, -- Window bar of not-current windows
 
     -- Common vim syntax groups used for all kinds of code and markup.
     -- Commented-out groups should chain up to their preferred (*) group
@@ -221,7 +221,7 @@ local theme = lush(function(injected_functions)
     -- Repeat         { }, --   for, do, while, etc.
     -- Label          { }, --   case, default, etc.
     -- Operator       { }, --   "sizeof", "+", "*", etc.
-    Keyword        { fg = shade(theme.fg, 15), gui = "italic" }, --   any other keyword
+    Keyword        { fg = theme.yellow, gui = "italic" }, --   any other keyword
     Exception      { fg = theme.red, gui = "italic" }, --   try, catch, throw
 
     PreProc        { fg = theme.blue }, -- (*) Generic Preprocessor
@@ -337,7 +337,7 @@ local theme = lush(function(injected_functions)
     -- sym"@repeat"            { }, -- Repeat
     -- sym"@label"             { }, -- Label
     -- sym"@operator"          { }, -- Operator
-    -- sym"@keyword"           { }, -- Keyword
+    sym"@keyword"           { fg = theme.blue }, -- Keyword
     -- sym"@exception"         { }, -- Exception
     -- sym"@variable"          { }, -- Identifier
     -- sym"@type"              { }, -- Type
@@ -345,8 +345,8 @@ local theme = lush(function(injected_functions)
     -- sym"@storageclass"      { }, -- StorageClass
     -- sym"@structure"         { }, -- Structure
     sym"@namespace"         { fg = theme.blue, gui = "italic" }, -- Identifier
-    -- sym"@include"           { }, -- Include
-    -- sym"@preproc"           { }, -- PreProc
+    sym"@include"           { fg = theme.blue }, -- Include
+    sym"@preproc"           { fg = theme.blue }, -- PreProc
     -- sym"@debug"             { }, -- Debug
     -- sym"@tag"               { }, -- Tag
 }
