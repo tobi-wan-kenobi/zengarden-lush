@@ -24,50 +24,52 @@
 local lush = require("lush")
 local hsl = lush.hsl
 
-local dark = {
-  bg = hsl("#353839"),
-  fg = hsl("#faebd7"),
+local colors = {
+  base = {
+    white = hsl("#faebd7"),
+    black = hsl("#353839"),
+    green = hsl("#177245"),
+    red = hsl("#ba1d58"),
+    yellow = hsl("#967117"),
+    blue = hsl("#26619c"),
+    magenta = hsl("#721772"),
+    cyan = hsl("#176372"),
+    orange = hsl("#c04000"),
+  },
+  shade1 = {
+    green = hsl("#378c5d"),
+    red = hsl("#d94070"),
+    yellow = hsl("#b38a32"),
+    blue = hsl("#477ab7"),
+    magenta = hsl("#8d348c"),
+    cyan = hsl("#377c8b"),
+    orange = hsl("#e05b1f"),
+  },
+  shade2 = {
+    green = hsl("#53a776"),
+    red = hsl("#f85e89"),
+    yellow = hsl("#d0a44c"),
+    blue = hsl("#6493d3"),
+    magenta = hsl("#a94fa6"),
+    cyan = hsl("#5396a6"),
+    orange = hsl("#ff7639"),
+  },
 }
 
-local light = {
-  bg = hsl("#faebd7"),
-  fg = hsl("#353839"),
+local themes = {
+  dark = {
+    fg = colors.base.white,
+    bg = colors.base.black,
+  },
+  light = {
+    fg = colors.base.black,
+    bg = colors.base.white,
+  },
 }
 
-local colors = dark
+local theme = themes.dark
 if vim.o.background == "light" then
-  colors = light
-end
-
-local white = hsl("#faebd7")
-local black = hsl("#353839")
-local fg = hsl("#faebd7")
-local bg = hsl("#353839")
-local grey = hsl("#686b6c")
-local dark_grey = hsl("#505354")
-local green = hsl("#53a776")
-local dark_green = hsl("#177245")
-local magenta = hsl("#a94fa6")
-local dark_magenta = hsl("#721772")
-local yellow = hsl("#d0a44c")
-local dark_yellow = hsl("#967117")
-local cyan = hsl("#5396a6")
-local medium_cyan = hsl("#377c8b")
-local dark_cyan = hsl("#176372")
-local orange = hsl("#ff7639")
-local dark_orange = hsl("#c04000")
-local blue = hsl("#6493d3")
-local medium_blue = hsl("#477ab7")
-local dark_blue = hsl("#26619c")
-local red = hsl("#f85e89")
-local dark_red = hsl("#ba1d58")
-
-if (vim.o.background == "light") then
-	fg = hsl("#353839")
-	bg = hsl("#faebd7")
-else
-	fg = hsl("#faebd7")
-	bg = hsl("#353839")
+  theme = themes.light
 end
 
 ---@diagnostic disable: undefined-global
