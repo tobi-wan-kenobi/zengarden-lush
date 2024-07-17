@@ -1,11 +1,15 @@
 ![License](https://img.shields.io/github/license/tobi-wan-kenobi/zengarden-lush)
 
 
-> **_NOTE:_**  This repository has been archived.
+---
+**NOTE**
+!!! This repository has been archived !!!
+
 It provides the same content as https://github.com/tobi-wan-kenobi/zengarden,
-since I am not fully relying on [lush](https://github.com/rktjmp/lush.nvim) for
+since I am now fully relying on [lush](https://github.com/rktjmp/lush.nvim) for
 creating color schemes (it's way less effort). Please use that repository instead.
 
+---
 
 ZenGarden is a color scheme for vim/neovim that tries to be
 calm and relaxing, while still retaining some important properties
