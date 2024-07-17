@@ -6,8 +6,9 @@
 !!! This repository has been archived !!!
 
 It provides the same content as https://github.com/tobi-wan-kenobi/zengarden,
-since I am now fully relying on [lush](https://github.com/rktjmp/lush.nvim) for
-creating color schemes (it's way less effort). Please use that repository instead.
+fully powered by [lush](https://github.com/rktjmp/lush.nvim).
+
+Please use that repository instead.
 
 ---
 
