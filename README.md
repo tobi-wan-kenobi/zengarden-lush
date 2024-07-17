@@ -4,7 +4,7 @@
 > **_NOTE:_**  This repository has been archived.
 It provides the same content as https://github.com/tobi-wan-kenobi/zengarden,
 since I am not fully relying on [lush](https://github.com/rktjmp/lush.nvim) for
-creating color schemes (it's way less effort).
+creating color schemes (it's way less effort). Please use that repository instead.
 
 
 ZenGarden is a color scheme for vim/neovim that tries to be
